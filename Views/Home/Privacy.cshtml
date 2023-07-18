@@ -1,0 +1,13 @@
+﻿@model List<Expense>
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+@foreach(Expense e in Model)
+{
+    <p>Dépense @e.Id par @e.Author.UserName</p>
+}
